@@ -1,0 +1,29 @@
+{
+  "name": "rollup-vue-nej",
+  "version": "1.0.0",
+  "description": "transform *.vue to *.js with nej define",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -o",
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FunnyLiu/rollup-vue-nej.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FunnyLiu/rollup-vue-nej/issues"
+  },
+  "homepage": "https://github.com/FunnyLiu/rollup-vue-nej#readme",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "rollup": "^1.27.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-vue": "^5.1.2",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
