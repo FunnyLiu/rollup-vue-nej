@@ -1,19 +1,6 @@
 <template>
-    <div class="footer-setting">
+    <div class="other">
         {{txt}}
-        <div v-if="list.length" class="footer-setting-wrap">
-            <div v-if="leftUrl" class="footer-setting-left">
-                <a :href="leftLink" target="_blank;">
-                    <img :src="leftUrl|changeUrlProtocol" alt="广告位">
-                </a>
-            </div>
-            <div v-if="rightUrl" class="footer-setting-right">
-                <a :href="rightLink" target="_blank;">
-                    <img :src="rightUrl|changeUrlProtocol" alt="广告位">
-                </a>
-            </div>
-        </div>
-        
     </div>
 </template>
 
@@ -22,7 +9,7 @@
 import util from 'pool/util/image';
 // use123
 var Comp = {
-    name: 'footer-setting',
+    name: 'other',
     props:{
         list:{
             default:[]
@@ -31,42 +18,6 @@ var Comp = {
     data:()=>{
         return {
             txt:util
-        }
-    },
-    computed:{
-        leftUrl() {
-            let list = this.list;
-            if(list.length && list.length>0){
-                return list[0].picUrl;
-            }
-        },
-        leftLink(){
-            let list = this.list;
-            if(list.length && list.length>0){
-                return list[0].linkUrl;
-            }
-        },
-        rightUrl(){
-            let list = this.list;
-            if(list.length && list.length>1){
-                return list[1].picUrl;
-            }
-        },
-        rightLink(){
-            let list = this.list;
-            if(list.length && list.length>1){
-                return list[1].linkUrl;
-            }
-        }
-    },
-    filters:{
-        changeUrlProtocol:function(url,protocol){
-            let _url
-            if(!url) {
-                return '';
-            }
-            _url = url.replace(/^(http:|https:)/,protocol ? (protocol+':') : '');
-            return _url;
         }
     }
 }

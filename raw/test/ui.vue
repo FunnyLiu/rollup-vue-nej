@@ -1,6 +1,6 @@
 <template>
     <div class="footer-setting">
-        {{txt}}
+        <other />
         <div v-if="list.length" class="footer-setting-wrap">
             <div v-if="leftUrl" class="footer-setting-left">
                 <a :href="leftLink" target="_blank;">
@@ -20,9 +20,13 @@
 <script>
 
 import util from 'pool/util/image';
+import other from '../another/someone/other.vue';
 // use123
 var Comp = {
     name: 'footer-setting',
+    components:{
+        other
+    },
     props:{
         list:{
             default:[]
