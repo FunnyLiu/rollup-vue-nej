@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/FunnyLiu/rollup-vue-nej#readme",
   "devDependencies": {
-    "http-server": "^0.11.1",
+    "http-server": "^0.11.2",
     "rollup": "^1.27.2",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-vue": "^5.1.2",
